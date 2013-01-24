@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>tss</string>
+	</array>
+	<key>name</key>
+	<string>TSS</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>rule that will match all digits</string>
+			<key>match</key>
+			<string>[0-9]+</string>
+			<key>name</key>
+			<string>constant.numeric.source.tss</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.class.source.tss</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>rule that will match tss clases and id | matches colors in hex format too #ffffff</string>
+			<key>match</key>
+			<string>"((#|\.).+)"</string>
+			<key>name</key>
+			<string>rule.id</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>rule that will match Ti Constants</string>
+			<key>match</key>
+			<string>(Ti|Titanium)\.UI\.(ANIMATION_CURVE_EASE_IN|ANIMATION_CURVE_EASE_IN_OUT|ANIMATION_CURVE_EASE_OUT|ANIMATION_CURVE_LINEAR|AUTOLINK_ALL|AUTOLINK_CALENDAR|AUTOLINK_EMAIL_ADDRESSES|AUTOLINK_MAP_ADDRESSES|AUTOLINK_NONE|AUTOLINK_PHONE_NUMBERS|AUTOLINK_URLS|FACE_DOWN|FACE_UP|FILL|INHERIT|INPUT_BORDERSTYLE_BEZEL|INPUT_BORDERSTYLE_LINE|INPUT_BORDERSTYLE_NONE|INPUT_BORDERSTYLE_ROUNDED|INPUT_BUTTONMODE_ALWAYS|INPUT_BUTTONMODE_NEVER|INPUT_BUTTONMODE_ONBLUR|INPUT_BUTTONMODE_ONFOCUS|KEYBOARD_APPEARANCE_ALERT|KEYBOARD_APPEARANCE_DEFAULT|KEYBOARD_ASCII|KEYBOARD_DECIMAL_PAD|KEYBOARD_DEFAULT|KEYBOARD_EMAIL|KEYBOARD_NAMEPHONE_PAD|KEYBOARD_NUMBERS_PUNCTUATION|KEYBOARD_NUMBER_PAD|KEYBOARD_PHONE_PAD|KEYBOARD_URL|LANDSCAPE_LEFT|LANDSCAPE_RIGHT|NOTIFICATION_DURATION_LONG|NOTIFICATION_DURATION_SHORT|PICKER_TYPE_COUNT_DOWN_TIMER|PICKER_TYPE_DATE|PICKER_TYPE_DATE_AND_TIME|PICKER_TYPE_PLAIN|PICKER_TYPE_TIME|PORTRAIT|RETURNKEY_DEFAULT|RETURNKEY_DONE|RETURNKEY_EMERGENCY_CALL|RETURNKEY_GO|RETURNKEY_GOOGLE|RETURNKEY_JOIN|RETURNKEY_NEXT|RETURNKEY_ROUTE|RETURNKEY_SEARCH|RETURNKEY_SEND|RETURNKEY_YAHOO|SIZE|TEXT_ALIGNMENT_CENTER|TEXT_ALIGNMENT_LEFT|TEXT_ALIGNMENT_RIGHT|TEXT_AUTOCAPITALIZATION_ALL|TEXT_AUTOCAPITALIZATION_NONE|TEXT_AUTOCAPITALIZATION_SENTENCES|TEXT_AUTOCAPITALIZATION_WORDS|TEXT_VERTICAL_ALIGNMENT_BOTTOM|TEXT_VERTICAL_ALIGNMENT_CENTER|TEXT_VERTICAL_ALIGNMENT_TOP|UNIT_CM|UNIT_DIP|UNIT_IN|UNIT_MM|UNIT_PX|UNKNOWN|UPSIDE_PORTRAIT|URL_ERROR_AUTHENTICATION|URL_ERROR_BAD_URL)</string>
+			<key>name</key>
+			<string>markup.changed</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>comment</key>
+			<string>match comments</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>match inline comments</string>
+			<key>match</key>
+			<string>//.*$</string>
+			<key>name</key>
+			<string>comment</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>match units</string>
+			<key>match</key>
+			<string>dp|%|px|sp</string>
+			<key>name</key>
+			<string>keyword</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>{</string>
+			<key>end</key>
+			<string>}</string>
+			<key>name</key>
+			<string>rule.definition</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>$self</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>rule that will match tss view properties</string>
+					<key>match</key>
+					<string>accessibilityHidden|accessibilityHint|accessibilityLabel|accessibilityValue|activeTabBackgroundColor|activeTabBackgroundDisabledColor|activeTabBackgroundDisabledImage|activeTabBackgroundFocusedColor|activeTabBackgroundFocusedImage|activeTabBackgroundImage|activeTabBackgroundSelectedColor|activeTabBackgroundSelectedImage|activeTab|active|activity|adSize|allowsSelectionDuringEditing|allowsSelection|allowUserCustomization|anchorPoint|androidView|appearance|autocapitalization|autocorrect|autoLink|backButtonTitleImage|backButtonTitle|backgroundColor|backgroundDisabledColor|backgroundDisabledImage|backgroundFocusedColor|backgroundFocusedImage|backgroundGradient|backgroundImage|backgroundLeftCap|backgroundPaddingBottom|backgroundPaddingLeft|backgroundPaddingRight|backgroundPaddingTop|backgroundRepeat|backgroundSelectedColor|backgroundSelectedImage|backgroundTopCap|badge|barColor|barImage|bccRecipients|borderBottom|borderColor|borderRadius|borderStyle|borderTop|borderWidth|bottom|cacheSize|canCancelEvents|cancelable|cancel|canDelete|canScale|ccRecipients|center|className|clearButtonMode|clearOnEdit|color|columns|contentHeight|contentOffset|contentWidth|countDownDuration|currentPage|data|decodeRetries|defaultImage|disableBounce|disabledLeftTrackImage|disabledRightTrackImage|disabledThumbImage|duration|editable|editButtonTitle|editing|ellipsize|enabled|enableReturnKey|enableZoomControls|filterAttribute|filterCaseInsensitive|focusable|fontSize|font|footerTitle|footerView|format24|fullscreen|hasCheck|hasChild|hasDetail|headerPullView|headerTitle|headerView|height|hideLoadIndicator|hideSearchOnSelection|highlightedColor|highlightedLeftTrackImage|highlightedRightTrackImage|highlightedThumbImage|hintText|hinttextid|hires|hitRect|horizontalBounce|horizontalMargin|horizontalWrap|html|icon|images|image|indentionLevel|index|items|keepScreenOn|keyboardToolbarColor|keyboardToolbarHeight|keyboardToolbar|keyboardType|labels|layout|leftButtonMode|leftButtonPadding|leftButton|leftImage|leftNavButton|leftTrackImage|leftTrackLeftCap|leftTrackTopCap|left|loading|locale|location|mask|maxDate|maxLength|maxRange|maxRowHeight|maxZoomScale|max|messageBody|messageid|message|minDate|minimumFontSize|minRange|minRowHeight|minuteInterval|minZoomScale|min|modal|mode|moveable|moving|navBarHidden|opacity|orientationModes|overlayEnabled|paddingLeft|paddingRight|pagingControlAlpha|pagingControlColor|pagingControlHeight|pagingControlOnTop|passwordMask|persistent|pluginState|preventDefaultImage|promptid|prompt|repeatCount|returnKeyType|reverse|rightButtonMode|rightButtonPadding|rightButton|rightImage|rightNavButton|rightTrackImage|rightTrackLeftCap|rightTrackTopCap|right|rowHeight|scalesPageToFit|scrollable|scrollIndicatorStyle|scrollingEnabled|scrollsToTop|searchHidden|search|sections|selectedBackgroundColor|selectedBackgroundImage|selectedColor|selectedImage|selectedLeftTrackImage|selectedRightTrackImage|selectedRow|selectedThumbImage|selected|selectionIndicator|selectionStyle|separatorColor|separatorStyle|shadowColor|shadowOffset|showBookmark|showCancel|showHorizontalScrollIndicator|showPagingControl|showScrollbars|showVerticalScrollIndicator|softKeyboardOnFocus|style|subject|suppressReturn|systemButton|tabBarHidden|tabDividerColor|tabDividerWidth|tabHeight|tabsAtBottom|tabsBackgroundColor|tabsBackgroundDisabledColor|tabsBackgroundDisabledImage|tabsBackgroundFocusedColor|tabsBackgroundFocusedImage|tabsBackgroundImage|tabsBackgroundSelectedColor|tabsBackgroundSelectedImage|tabs|textAlign|textid|text|thumbImage|tint|titleControl|titleid|titleImage|titleOff|titleOn|titlePrompt|titlepromptid|title|toolbar|top|toRecipients|touchEnabled|transform|translucent|type|url|userAgent|useSpinner|value|verticalAlign|verticalBounce|verticalMargin|views|visibleItems|visible|width|willHandleTouches|windowPixelFormat|window|wobble|wordWrap|xOffset|yOffset|zIndex|zoomScale</string>
+					<key>name</key>
+					<string>support.type.source.tss</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.tss</string>
+	<key>uuid</key>
+	<string>f67487ca-fece-4b63-9183-88f923fa4e7e</string>
+</dict>
+</plist>
