@@ -23,8 +23,8 @@
 		"ti-ui-views" : {
 			"patterns": [
 				{
-					"name" : "keyword.other.tss",
-					"match" : "retrtetertrte"
+					"name" : "keyword.other.views.tss",
+					"match" : "ActivityIndicator|AlertDialog|Animation|Button|ButtonBar|DashboardItem|DashboardView|EmailDialog|ImageView|Label|MaskedImage|Notification|OptionDialog|Picker|PickerColumn|PickerRow|ProgressBar|ScrollView|ScrollableView|SearchBar|Slider|Switch|Tab|TabGroup|TableView|TableViewRow|TableViewSection|TextArea|TextField|View|WebView|Window"
 				}
 			]
 		},

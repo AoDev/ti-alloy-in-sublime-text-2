@@ -235,9 +235,9 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>retrtetertrte</string>
+					<string>ActivityIndicator|AlertDialog|Animation|Button|ButtonBar|DashboardItem|DashboardView|EmailDialog|ImageView|Label|MaskedImage|Notification|OptionDialog|Picker|PickerColumn|PickerRow|ProgressBar|ScrollView|ScrollableView|SearchBar|Slider|Switch|Tab|TabGroup|TableView|TableViewRow|TableViewSection|TextArea|TextField|View|WebView|Window</string>
 					<key>name</key>
-					<string>keyword.other.tss</string>
+					<string>keyword.other.views.tss</string>
 				</dict>
 			</array>
 		</dict>
