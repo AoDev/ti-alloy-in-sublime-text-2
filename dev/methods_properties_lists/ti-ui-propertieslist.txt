@@ -85,11 +85,14 @@ ellipsize
 enabled
 enableReturnKey
 enableZoomControls
+exitOnClose
 filterAttribute
 filterCaseInsensitive
 focusable
 font
+fontFamily
 fontSize
+fontWeight
 footerTitle
 footerView*
 format24
@@ -195,6 +198,7 @@ scrollable
 scrollIndicatorStyle
 scrollingEnabled
 scrollsToTop
+scrollType
 search
 searchHidden
 sections
