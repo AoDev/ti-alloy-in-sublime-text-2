@@ -3,6 +3,9 @@ ti-alloy-in-sublime-text-2
 
 Adding support for titanium alloy In sublime text 2 : a better experience for those who prefers to code in Sublime Text 2
 
+__Note: This repository is not maintained anymore.__
+There are several plugins which are using this one.
+I still accept pull requests.
 
 Objectives
 ------------
@@ -12,11 +15,6 @@ Alloy
 * Syntax highlighting for Alloy TSS files 
 * Auto-completions for Alloy TSS files 
 * Snippets for Alloy TSS files
-
-Titanium
-
-* Auto-completions for Titanium clases, methods and snippets
-* Snippets for Titanium
 
 
 Anybody is welcome to contribute ;)
